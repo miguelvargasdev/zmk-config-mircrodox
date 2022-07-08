@@ -14,36 +14,37 @@
 #define NUM  3
 #define GAMING 4
 
-/{
-
+/ {
     macros {
         mute_teamspeak: mute_teamspeak {
             wait-ms = <10>;
             label = "mute_teamspeak";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-            = <&macro_press &kp GRAVE &kp N1>
-            , <&macro_wait_time 10>
-            , <&macro_release &kp GRAVE &kp N1>
-            ;
-        }; 
-
+            bindings =
+                <&macro_press>,
+                <&kp GRAVE &kp N1>,
+                <&macro_wait_time 10>,
+                <&macro_release>,
+                <&kp GRAVE &kp N1>;
+        };
         deafen_teamspeak: deafen_teamspeak {
             wait-ms = <10>;
             label = "deafen_teamspeak";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-            = <&macro_press &kp GRAVE &kp N2>
-            , <&macro_wait_time 10>
-            , <&macro_release &kp GRAVE &kp N2>
-            ;
-        }; 
+            bindings =
+                <&macro_press>,
+                <&kp GRAVE &kp N2>,
+                <&macro_wait_time 10>,
+                <&macro_release>,
+                <&kp GRAVE &kp N2>;
+        };
     };
 
     combos {
         compatible = "zmk,combos";
+
         combo_teamspeak_mute {
             timeout-ms = <50>;
             key-positions = <0 1>;
@@ -59,7 +60,7 @@
         combo_gaming_layer_switch {
             timeout-ms = <50>;
             key-positions = <0 3>;
-            bindings = <&tog GAMING>;
+            bindings = <&tog 4>;
         };
     };
 
@@ -71,7 +72,9 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            bindings =
+                <&kp>,
+                <&kp>;
         };
     };
 
@@ -86,14 +89,13 @@
             //             | GUI | NAV | TAB  |   | SPC | SYM  | ALT |
 
             bindings = <
-                &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y            &kp U       &kp I        &kp O       &kp P
-                &hm LGUI A  &hm LALT S  &hm LCTRL D &hm LSHFT F &kp G       &kp H            &hm RSHFT J &hm RCTRL K  &hm RALT L  &hm RGUI SEMI
-                &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N            &kp M       &kp COMMA    &kp DOT     &kp FSLH
-                                      &lt SYM LGUI  &mo NAV     &lt NUM RET &mt RCTRL SPACE  &mo SYM     &kp RET
+      &kp Q       &kp W        &kp E        &kp R        &kp T            &kp Y            &kp U        &kp I       &kp O          &kp P
+ &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F        &kp G            &kp H      &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI
+      &kp Z       &kp X        &kp C        &kp V        &kp B            &kp N            &kp M    &kp COMMA     &kp DOT       &kp FSLH
+                           &lt 2 ESC    &lt 1 TAB  &lt 3 SPACE  &mt RCTRL ENTER  &lt 2 BACKSPACE   &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-
         };
 
         nav_layer {
@@ -102,51 +104,52 @@
             // | BSPC | PGDN | PGUP | CTRL | NUM |   | LEFT | DOWN |  UP  | RIGHT | BKSP |
             // | BT2  |      |      |      |     |   |  \   | ENT  |      |       |      |
             //               | GUI  |      |     |   |      |      |      |
+
             bindings = <
-                &kp GRAVE    &kp GRAVE   &kp ESC        &kp TILDE       &trans     &kp TAB      &kp HOME        &trans     &kp END   &kp BSPC
-                &kp BSPC     &kp PG_UP   &kp PG_DN      &kp DEL         &mo NUM    &kp LEFT     &kp DOWN        &kp UP     &kp RIGHT &kp RET
-                &trans       &trans      &trans         &trans          &trans     &kp BSLH     &trans          &trans     &trans    &trans
-                                         &trans         &trans          &trans     &kp TAB      &trans          &trans
+ &kp GRAVE  &kp GRAVE    &kp ESC  &kp TILDE  &trans   &kp TAB  &kp HOME  &trans    &kp END  &kp BSPC
+  &kp BSPC  &kp PG_UP  &kp PG_DN    &kp DEL   &mo 3  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT   &kp RET
+    &trans     &trans     &trans     &trans  &trans  &kp BSLH    &trans  &trans     &trans    &trans
+                          &trans     &trans  &trans   &kp TAB    &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-
         };
-   
+
         sym_layer {
             // -----------------------------------------------------------------------------------------
             // |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
             // |     |     |     |  [  |  (  |   |  -  |  =  |  {  |  }  | "|" |
             // |     |     |     |  ]  |  )  |   |  _  |  +  |  [  |  ]  |  \  |
             //             | GUI |     | SPC |   | ENT |     | ALT |
+
             bindings = <
-                &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp STAR  &kp MINUS&kp EQUAL
-                &kp TILDE &kp PIPE  &kp LBKT  &kp LPAR  &kp LBRC    &kp PIPE  &kp UNDER &kp EQUAL &kp DQT  &kp SQT 
-                &kp GRAVE &kp AMPS  &kp RBKT  &kp RPAR  &kp RBRC    &kp AMPS  &kp PLUS  &kp MINUS &kp PIPE &trans  
-                                    &kp FSLH  &kp BSLH  &kp RSHFT   &trans    &trans    &trans 
+  &kp EXCL    &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET   &kp AMPS   &kp STAR  &kp MINUS  &kp EQUAL
+ &kp TILDE  &kp PIPE  &kp LBKT  &kp LPAR   &kp LBRC   &kp PIPE  &kp UNDER  &kp EQUAL    &kp DQT    &kp SQT
+ &kp GRAVE  &kp AMPS  &kp RBKT  &kp RPAR   &kp RBRC   &kp AMPS   &kp PLUS  &kp MINUS   &kp PIPE     &trans
+                      &kp FSLH  &kp BSLH  &kp RSHFT     &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-        
         };
 
         // This layer is unreachable until "tri layer state" is sorted out.
         // Leaving it here for completeness.
+
         num_layer {
             // -----------------------------------------------------------------------------------------
             // |     |     |     |     |     |   |  A  |  7  |  8  |  9  |  D  |
             // |     |     |     |     |     |   |  B  |  4  |  5  |  6  |  E  |
             // |     |     |     |     |     |   |  C  |  1  |  2  |  3  |  F  |
             //             |     |     |     |   |  0  |  .  |     |
+
             bindings = <
-                &bt BT_CLR      &bt BT_NXT      &bt BT_PRV      &trans          &trans    &kp A         &kp N7  &kp N8 &kp N9 &kp D
-                &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &trans    &kp B         &kp N4  &kp N5 &kp N6 &kp E
-                &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &trans    &kp C         &kp N1  &kp N2 &kp N3 &kp F
-                                &trans          &trans          &trans          &kp N0    &kp DOT       &trans
+   &bt BT_CLR    &bt BT_NXT    &bt BT_PRV        &trans  &trans   &kp A   &kp N7  &kp N8  &kp N9   &kp D
+     &kp LGUI      &kp LALT     &kp LCTRL     &kp LSHFT  &trans   &kp B   &kp N4  &kp N5  &kp N6   &kp E
+ &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans   &kp C   &kp N1  &kp N2  &kp N3   &kp F
+                                   &trans        &trans  &trans  &kp N0  &kp DOT  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-
         };
 
         gaming_layer {
@@ -155,16 +158,15 @@
             // |     |     |     |  [  |  (  |   |  -  |  =  |  {  |  }  | "|" |
             // |     |     |     |  ]  |  )  |   |  _  |  +  |  [  |  ]  |  \  |
             //             | GUI |     | SPC |   | ENT |     | ALT |
+
             bindings = <
-                &kp ESC   &kp N1    &kp N2    &kp N3    &kp N4      &kp CARET &kp AMPS  &kp STAR        &kp LPAR &kp RPAR
-                &kp TAB   &kp Q     &kp W     &kp E     &kp R       &kp DQT   &kp UNDER &kp EQUAL       &kp DQT  &kp SQT 
-                &kp LSHFT &kp A     &kp S     &kp D     &kp F       &kp SQT   &kp PLUS  &kp MINUS       &kp PIPE &trans  
-                                    &kp G     &kp C     &kp SPACE   &to BASE  &trans    &trans  
+   &kp ESC  &kp N1  &kp N2  &kp N3     &kp N4  &kp CARET   &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
+   &kp TAB   &kp Q   &kp W   &kp E      &kp R    &kp DQT  &kp UNDER  &kp EQUAL   &kp DQT   &kp SQT
+ &kp LSHFT   &kp A   &kp S   &kp D      &kp F    &kp SQT   &kp PLUS  &kp MINUS  &kp PIPE    &trans
+                     &kp G   &kp C  &kp SPACE      &to 0     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-        
         };
-
     };
 };
