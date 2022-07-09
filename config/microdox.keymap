@@ -161,7 +161,7 @@
 
             bindings = <
           &kp ESC  &kp N1       &kp N2      &kp N3     &kp N4  &kp CARET   &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
-          &kp TAB   &kp Q        &kp W       &kp E      &kp R    &kp DQT  &kp UNDER  &kp EQUAL   &kp DQT   &kp SQT
+        &hm H TAB   &kp Q        &kp W       &kp E      &kp R    &kp DQT  &kp UNDER  &kp EQUAL   &kp DQT   &kp SQT
  &mt LEFT_SHIFT Z   &kp A        &kp S       &kp D      &kp F    &kp SQT   &kp PLUS  &kp MINUS  &kp PIPE    &trans
                            &mt LCTRL G  &mt LALT C  &kp SPACE     &trans     &trans     &trans
             >;
