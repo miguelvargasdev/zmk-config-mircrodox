@@ -89,9 +89,9 @@
             //             | GUI | NAV | TAB  |   | SPC | SYM  | ALT |
 
             bindings = <
-  &kp Q       &kp W        &kp E        &kp R        &kp T        &kp Y          &kp U        &kp I       &kp O          &kp P
-  &kp A  &hm LALT S  &hm LCTRL D  &hm LSHFT F        &kp G        &kp H    &hm RSHFT J  &hm RCTRL K  &hm RALT L  &kp SEMICOLON
-  &kp Z       &kp X        &kp C        &kp V        &kp B        &kp N          &kp M    &kp COMMA     &kp DOT       &kp FSLH
+  &kp Q       &kp W        &kp E        &kp R        &kp T        &kp Y          &kp U        &kp I       &kp O                   &kp P
+  &kp A  &hm LALT S  &hm LCTRL D  &hm LSHFT F        &kp G        &kp H    &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm LEFT_GUI SEMICOLON
+  &kp Z       &kp X        &kp C        &kp V        &kp B        &kp N          &kp M    &kp COMMA     &kp DOT                &kp FSLH
                        &lt 1 ESC    &lt 3 TAB  &lt 2 SPACE  &lt 2 ENTER  &kp BACKSPACE   &kp DELETE
             >;
 
