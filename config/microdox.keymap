@@ -106,10 +106,10 @@
             //               | GUI  |      |     |   |      |      |      |
 
             bindings = <
- &kp GRAVE  &kp GRAVE    &kp ESC  &kp TILDE  &trans   &kp TAB  &kp HOME  &trans    &kp END  &kp BSPC
-  &kp BSPC  &kp PG_UP  &kp PG_DN    &kp DEL   &mo 3  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT   &kp RET
-    &trans     &trans     &trans     &trans  &trans  &kp BSLH    &trans  &trans     &trans    &trans
-                          &trans     &trans  &trans   &kp TAB    &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans
+ &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
+ &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans
+                 &trans  &trans  &trans  &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -126,7 +126,7 @@
          &kp EXCL             &kp AT  &kp HASH  &kp DOLLAR      &kp PRCNT         &kp CARET   &kp AMPS   &kp STAR  &kp MINUS  &kp EQUAL
  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LPAR    &kp RPAR       &kp BSLH          &kp FSLH  &kp UNDER  &kp EQUAL    &kp DQT    &kp SQT
         &kp GRAVE           &kp AMPS  &kp LBRC    &kp RBRC  &kp LESS_THAN  &kp GREATER_THAN   &kp PLUS  &kp MINUS   &kp PIPE     &trans
-                                        &trans      &trans      &kp RSHFT            &trans     &trans     &trans
+                                        &trans      &trans         &trans            &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
