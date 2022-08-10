@@ -88,10 +88,10 @@
             //             | GUI | NAV | TAB  |   | SPC | SYM  | ALT |
 
             bindings = <
-  &kp Q       &kp W        &kp E        &kp R        &kp T        &kp Y          &kp U        &kp I       &kp O               &kp P
-  &kp A  &hm LALT S  &hm LCTRL D  &hm LSHFT F        &kp G        &kp H    &hm RSHFT J  &hm RCTRL K  &hm RALT L  &mt LWIN SEMICOLON
-  &kp Z       &kp X        &kp C        &kp V        &kp B        &kp N          &kp M    &kp COMMA     &kp DOT            &kp FSLH
-                         &kp ESC    &lt 3 TAB  &lt 2 SPACE  &lt 1 ENTER  &kp BACKSPACE   &kp DELETE
+  &kp Q   &kp W    &kp E   &kp R                     &kp T        &kp Y          &kp U       &kp I    &kp O     &kp P
+  &kp A   &kp S    &kp D   &kp F                     &kp G        &kp H          &kp J       &kp K    &kp L  &kp SEMI
+  &kp Z   &kp X    &kp C   &kp V                     &kp B        &kp N          &kp M   &kp COMMA  &kp DOT  &kp FSLH
+                 &kp ESC   &mo 1  &mt LEFT_SHIFT undefined  &lt 1 SPACE  &kp BACKSPACE  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -105,10 +105,10 @@
             //               | GUI  |      |     |   |      |      |      |
 
             bindings = <
- &kp F1           &kp F2        &kp F3             &kp F4   &none   &none      &kp PG_UP  &kp UP_ARROW      &none  &kp HOME
- &kp F5  &mt LEFT_ALT F6  &mt LCTRL F7  &mt LEFT_SHIFT F8   &none   &none       &kp LEFT      &kp DOWN  &kp RIGHT     &none
- &kp F9          &kp F10       &kp F11            &kp F12   &none   &none  &kp PAGE_DOWN         &none      &none   &kp END
-                                &trans             &trans  &trans  &trans         &trans        &trans
+       &kp F1        &kp F2          &kp F3           &none  &kp C_VOLUME_UP   &none     &kp HOME  &kp UP_ARROW    &kp END   &none
+ &kp LEFT_WIN  &kp LEFT_ALT       &kp LCTRL  &kp LEFT_SHIFT     &kp C_VOL_DN   &none     &kp LEFT      &kp DOWN  &kp RIGHT   &none
+       &kp F9       &kp F10         &kp F11         &kp F12       &kp K_MUTE   &none  &kp PAGE_UP         &none  &kp PG_DN   &none
+                             &kp C_AC_PASTE          &trans           &trans  &trans       &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
