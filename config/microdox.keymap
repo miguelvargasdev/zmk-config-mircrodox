@@ -79,6 +79,17 @@
             key-positions = <0 1 2 13>;
             layers = <0>;
         };
+
+        f {
+            bindings = <&kp F>;
+            key-positions = <2 3>;
+            layers = <0>;
+        };
+
+        g {
+            bindings = <&kp G>;
+            key-positions = <2 1>;
+        };
     };
 
     behaviors {
