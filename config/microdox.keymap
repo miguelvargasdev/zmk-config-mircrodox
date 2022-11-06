@@ -115,25 +115,25 @@
         b {
             bindings = <&kp B>;
             key-positions = <10 13>;
-            layers = <1 2 3 4 5>;
+            layers = <0>;
         };
 
         c {
             bindings = <&kp C>;
             key-positions = <12 13>;
-            layers = <3 4 5 1 2>;
+            layers = <0>;
         };
 
         d {
             bindings = <&kp D>;
             key-positions = <1 2 3>;
-            layers = <3 4 5 1 2>;
+            layers = <0>;
         };
 
         f {
             bindings = <&kp F>;
             key-positions = <2 3>;
-            layers = <3 4 5 1 2>;
+            layers = <>;
         };
 
         g {
