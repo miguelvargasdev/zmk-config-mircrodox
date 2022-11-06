@@ -83,11 +83,13 @@
         fkey {
             bindings = <&kp F>;
             key-positions = <2 3>;
+            layers = <0>;
         };
 
         gkey {
             bindings = <&kp G>;
             key-positions = <2 1>;
+            layers = <0>;
         };
     };
 
