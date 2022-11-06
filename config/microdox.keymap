@@ -19,6 +19,17 @@
 
     combos {
         compatible = "zmk,combos";
+
+        f {
+            bindings = <&kp F>;
+            key-positions = <2 3>;
+            layers = <0>;
+        };
+
+        c {
+            bindings = <&kp C>;
+            key-positions = <12 13>;
+        };
     };
 
     behaviors {
@@ -53,6 +64,33 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        Numbers {
+            bindings = <
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                 &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Symbols_1 {
+            bindings = <
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                 &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Symbols_2 {
+            bindings = <
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                 &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
 
         // This layer is unreachable until "tri layer state" is sorted out.
