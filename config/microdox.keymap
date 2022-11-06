@@ -195,9 +195,68 @@
             key-positions = <2 12>;
             timeout-ms = <175>;
         };
-    };
 
-   
+        combo_esc {
+            bindings = <&kp ESC>;
+            key-positions = <3 2 10>;
+            timeout-ms = <175>;
+        };
+
+        combo_layer_navigation {
+            bindings = <&tog 5>;
+            key-positions = <11 2 13>;
+            timeout-ms = <175>;
+        };
+
+        combo_m {
+            bindings = <&kp M>;
+            key-positions = <12 11 10>;
+            timeout-ms = <175>;
+            layers = <0>;
+        };
+
+        combo_d {
+            bindings = <&kp D>;
+            key-positions = <3 2 1>;
+            timeout-ms = <175>;
+            layers = <0>;
+        };
+
+        combo_p {
+            bindings = <&kp P>;
+            key-positions = <11 10 13>;
+            timeout-ms = <175>;
+            layers = <0>;
+        };
+
+        combo_q {
+            bindings = <&kp Q>;
+            key-positions = <3 1 0>;
+            timeout-ms = <175>;
+            layers = <0>;
+        };
+
+        combo_x {
+            bindings = <&kp X>;
+            key-positions = <2 1 0>;
+            timeout-ms = <175>;
+            layers = <0>;
+        };
+
+        combo_l {
+            bindings = <&kp L>;
+            key-positions = <13 12 11>;
+            timeout-ms = <175>;
+            layers = <0>;
+        };
+
+        combo_single_quote {
+            bindings = <&kp SQT>;
+            key-positions = <3 12 11>;
+            timeout-ms = <175>;
+            layers = <0>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
