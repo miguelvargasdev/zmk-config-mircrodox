@@ -41,6 +41,42 @@
         bkspc {
             bindings = <&kp BACKSPACE>;
             key-positions = <13 2>;
+            layers = <0>;
+        };
+
+        ctrl {
+            bindings = <&sk LCTRL>;
+            key-positions = <0 13>;
+            layers = <0>;
+        };
+
+        gui {
+            bindings = <&sk LEFT_GUI>;
+            key-positions = <0 12>;
+            layers = <0>;
+        };
+
+        alt {
+            bindings = <&sk LEFT_ALT>;
+            key-positions = <0 11>;
+            layers = <0>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <3 13>;
+            layers = <0>;
+        };
+
+        del {
+            bindings = <&kp DELETE>;
+            key-positions = <2 11>;
+            layers = <0>;
+        };
+
+        shift {
+            bindings = <&sk LEFT_SHIFT>;
+            key-positions = <0 1 2 13>;
         };
     };
 
