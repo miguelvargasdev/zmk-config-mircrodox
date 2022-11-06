@@ -23,6 +23,24 @@
         space {
             bindings = <&kp SPACE>;
             key-positions = <10 11 12 13>;
+            layers = <0>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <10 2 3>;
+            layers = <0>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <3 2 1 10>;
+            layers = <0>;
+        };
+
+        bkspc {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <13 2>;
         };
     };
 
