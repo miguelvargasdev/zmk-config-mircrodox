@@ -25,42 +25,36 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <13 2>;
             timeout-ms = <175>;
-            layers = <>;
         };
 
         combo_control {
             bindings = <&sk LCTRL>;
             key-positions = <0 13>;
             timeout-ms = <175>;
-            layers = <>;
         };
 
         combo_gui {
             bindings = <&sk LEFT_GUI>;
             key-positions = <0 12>;
             timeout-ms = <175>;
-            layers = <>;
         };
 
         combo_alt {
             bindings = <&sk LEFT_ALT>;
             key-positions = <0 11>;
             timeout-ms = <175>;
-            layers = <>;
         };
 
         combo_enter {
             bindings = <&kp ENTER>;
             key-positions = <3 13>;
             timeout-ms = <175>;
-            layers = <>;
         };
 
         combo_delete {
             bindings = <&kp DELETE>;
             key-positions = <2 11>;
             timeout-ms = <175>;
-            layers = <>;
         };
 
         combo_shift_lock {
@@ -201,21 +195,29 @@
             timeout-ms = <175>;
             layers = <1>;
         };
+        combo_esc              { timeout-ms = <175>; key-positions = <3 2 10>; bindings = <&kp ESC>; };
     };
 
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
-        };
-    };
+behaviors {
+		layer_base_kp: layer_base_kp { compatible = "zmk,behavior-hold-tap"; label = "layer_base_kp"; 
+						#binding-cells = <2>; tapping_term_ms = 200; flavor = "tap-preferred"; 
+						bindings = <&mo>, <&kp>; };
+		layer_numbers_kp: layer_numbers_kp { compatible = "zmk,behavior-hold-tap"; label = "layer_numbers_kp"; 
+						#binding-cells = <2>; tapping_term_ms = 200; flavor = "tap-preferred"; 
+						bindings = <&mo>, <&kp>; };
+		layer_symbols_kp: layer_symbols_kp { compatible = "zmk,behavior-hold-tap"; label = "layer_symbols_kp"; 
+						#binding-cells = <2>; tapping_term_ms = 200; flavor = "tap-preferred"; 
+						bindings = <&mo>, <&kp>; };
+		layer_parentheticals_kp: layer_parentheticals_kp { compatible = "zmk,behavior-hold-tap"; label = "layer_parentheticals_kp";
+						#binding-cells = <2>; tapping_term_ms = 200; flavor = "tap-preferred";
+						bindings = <&mo>, <&kp>; };
+		layer_custom_kp: layer_custom_kp { compatible = "zmk,behavior-hold-tap"; label = "layer_custom_kp";
+						#binding-cells = <2>; tapping_term_ms = 200; flavor = "tap-preferred";
+						bindings = <&mo>, <&kp>; };
+		ctrl_alt_kp: ctrl_alt_kp { compatible = "zmk,behavior-hold-tap"; label = "ctrl_alt_kp";
+						#binding-cells = <2>; tapping_term_ms = 200; flavor = "tap-preferred";
+						bindings = <&sk>, <&sk>; };
+	};
 
     keymap {
         compatible = "zmk,keymap";
@@ -228,8 +230,8 @@
             //             | GUI | NAV | TAB  |   | SPC | SYM  | ALT |
 
             bindings = <
- &lt 1 S   &kp T   &kp R  &lt 2 A   &none   &none   &none   &none   &none   &none
- &lt 3 O   &kp I   &kp Y  &lt 4 E   &none   &none   &none   &none   &none   &none
+&layer_numbers_kp 1 S   &kp T   &kp R  &layer_parentheticals_kp 2 A   &none   &none   &none   &none   &none   &none
+ &layer_custom_kp 3 O   &kp I   &kp Y  &layer_symbols_kp 4 E   &none   &none   &none   &none   &none   &none
    &none   &none   &none    &none   &none   &none   &none   &none   &none   &none
                    &none    &none   &none   &none   &none   &none
             >;
@@ -239,7 +241,7 @@
 
         Numbers {
             bindings = <
-  &none  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &trans  &trans  &trans  &trans  &trans  &trans
+  &mo 1  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &trans  &trans  &trans  &trans  &trans  &trans
   &none  &kp NUMBER_6  &kp NUMBER_5  &kp NUMBER_4  &trans  &trans  &trans  &trans  &trans  &trans
  &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
                              &trans        &trans  &trans  &trans  &trans  &trans
@@ -248,7 +250,7 @@
 
         Symbols_1 {
             bindings = <
- &kp LBRC  &kp LPAR           &kp RPAR   &none  &trans  &trans  &trans  &trans  &trans  &trans
+ &kp LBRC  &kp LPAR           &kp RPAR   &mo 2  &trans  &trans  &trans  &trans  &trans  &trans
  &kp RBRC  &kp LBKT  &kp RIGHT_BRACKET   &none  &trans  &trans  &trans  &trans  &trans  &trans
    &trans    &trans             &trans   &none  &trans  &trans  &trans  &trans  &trans  &trans
                                 &trans  &trans  &trans  &trans  &trans  &trans
@@ -258,7 +260,7 @@
         Symbols_2 {
             bindings = <
   &none   &kp HASH       &kp AT  &kp EXCLAMATION  &trans  &trans  &trans  &trans  &trans  &trans
-  &none  &kp CARET  &kp PERCENT       &kp DOLLAR  &trans  &trans  &trans  &trans  &trans  &trans
+  &mo 3  &kp CARET  &kp PERCENT       &kp DOLLAR  &trans  &trans  &trans  &trans  &trans  &trans
  &trans     &trans       &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
                          &trans           &trans  &trans  &trans  &trans  &trans
             >;
