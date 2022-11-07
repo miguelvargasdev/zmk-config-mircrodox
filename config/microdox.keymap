@@ -336,23 +336,9 @@
             layers = <2>;
         };
 
-        combo_bckslash {
-            bindings = <&kp BSLH>;
-            key-positions = <0 1 2>;
-            timeout-ms = <175>;
-            layers = <2>;
-        };
-
         combo_tilde {
             bindings = <&kp TILDE>;
             key-positions = <11 12>;
-            timeout-ms = <175>;
-            layers = <2>;
-        };
-
-        combo_pipe {
-            bindings = <&kp PIPE>;
-            key-positions = <10 12 11>;
             timeout-ms = <175>;
             layers = <2>;
         };
@@ -381,13 +367,6 @@
         combo_minus {
             bindings = <&kp MINUS>;
             key-positions = <12 13>;
-            timeout-ms = <175>;
-            layers = <3>;
-        };
-
-        combo_plus {
-            bindings = <&kp PLUS>;
-            key-positions = <11 12 13>;
             timeout-ms = <175>;
             layers = <3>;
         };
