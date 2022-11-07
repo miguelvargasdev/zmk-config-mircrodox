@@ -309,67 +309,6 @@
             timeout-ms = <175>;
             layers = <0>;
         };
-
-        combo_dquotes {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <10 11 3>;
-        };
-
-        combo_lessthan {
-            bindings = <&kp LESS_THAN>;
-            key-positions = <0 1>;
-            timeout-ms = <175>;
-            layers = <2>;
-        };
-
-        combo_greaterthan {
-            bindings = <&kp GREATER_THAN>;
-            key-positions = <1 2>;
-            timeout-ms = <175>;
-            layers = <2>;
-        };
-
-        combo_grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <10 11>;
-            timeout-ms = <175>;
-            layers = <2>;
-        };
-
-        combo_tilde {
-            bindings = <&kp TILDE>;
-            key-positions = <11 12>;
-            timeout-ms = <175>;
-            layers = <2>;
-        };
-
-        combo_multipy {
-            bindings = <&kp STAR>;
-            key-positions = <1 2>;
-            timeout-ms = <175>;
-            layers = <3>;
-        };
-
-        combo_amp {
-            bindings = <&kp AMPERSAND>;
-            key-positions = <2 3>;
-            timeout-ms = <175>;
-            layers = <3>;
-        };
-
-        combo_underscore {
-            bindings = <&kp UNDERSCORE>;
-            key-positions = <11 12>;
-            timeout-ms = <175>;
-            layers = <3>;
-        };
-
-        combo_minus {
-            bindings = <&kp MINUS>;
-            key-positions = <12 13>;
-            timeout-ms = <175>;
-            layers = <3>;
-        };
     };
 
     keymap {
