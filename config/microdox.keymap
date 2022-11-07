@@ -36,7 +36,7 @@
         };
 
         combo_n {
-            bindings = <&kp N>;
+            bindings = <&kp Y>;
             key-positions = <11 10>;
             timeout-ms = <175>;
             layers = <0>;
@@ -288,6 +288,109 @@
             timeout-ms = <175>;
             layers = <0>;
         };
+
+        combo_qmark {
+            bindings = <&kp QUESTION>;
+            key-positions = <10 1 3>;
+            timeout-ms = <175>;
+            layers = <0>;
+        };
+
+        combo_semi {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <10 1>;
+            timeout-ms = <175>;
+            layers = <0>;
+        };
+
+        combo_colon {
+            bindings = <&kp COLON>;
+            key-positions = <10 2>;
+            timeout-ms = <175>;
+            layers = <0>;
+        };
+
+        combo_dquotes {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <10 11 3>;
+        };
+
+        combo_lessthan {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <0 1>;
+            timeout-ms = <175>;
+            layers = <2>;
+        };
+
+        combo_greaterthan {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <1 2>;
+            timeout-ms = <175>;
+            layers = <2>;
+        };
+
+        combo_grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <10 11>;
+            timeout-ms = <175>;
+            layers = <2>;
+        };
+
+        combo_bckslash {
+            bindings = <&kp BSLH>;
+            key-positions = <0 1 2>;
+            timeout-ms = <175>;
+            layers = <2>;
+        };
+
+        combo_tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <11 12>;
+            timeout-ms = <175>;
+            layers = <2>;
+        };
+
+        combo_pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <10 12 11>;
+            timeout-ms = <175>;
+            layers = <2>;
+        };
+
+        combo_multipy {
+            bindings = <&kp STAR>;
+            key-positions = <1 2>;
+            timeout-ms = <175>;
+            layers = <3>;
+        };
+
+        combo_amp {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <2 3>;
+            timeout-ms = <175>;
+            layers = <3>;
+        };
+
+        combo_underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <11 12>;
+            timeout-ms = <175>;
+            layers = <3>;
+        };
+
+        combo_minus {
+            bindings = <&kp MINUS>;
+            key-positions = <12 13>;
+            timeout-ms = <175>;
+            layers = <3>;
+        };
+
+        combo_plus {
+            bindings = <&kp PLUS>;
+            key-positions = <11 12 13>;
+            timeout-ms = <175>;
+            layers = <3>;
+        };
     };
 
     keymap {
@@ -302,7 +405,7 @@
 
             bindings = <
  &lt 1 S   &kp T   &kp R  &lt 2 A   &none   &none   &none   &none   &none   &none
- &lt 3 O   &kp I   &kp Y  &lt 4 E   &none   &none   &none   &none   &none   &none
+ &lt 3 O   &kp I   &kp N  &lt 4 E   &none   &none   &none   &none   &none   &none
    &none   &none   &none    &none   &none   &none   &none   &none   &none   &none
                    &none    &none   &none   &none   &none   &none
             >;
