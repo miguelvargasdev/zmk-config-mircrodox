@@ -309,6 +309,20 @@
             timeout-ms = <175>;
             layers = <0>;
         };
+
+        combolt {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <0 1>;
+            timeout-ms = <175>;
+            layers = <2>;
+        };
+
+        combogt {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <1 2>;
+            timeout-ms = <175>;
+            layers = <2>;
+        };
     };
 
     keymap {
