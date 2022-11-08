@@ -195,19 +195,6 @@
             key-positions = <2 12>;
             timeout-ms = <175>;
         };
-        combolt {
-            bindings = <&kp LESS_THAN>;
-            key-positions = <0 1>;
-            timeout-ms = <175>;
-            layers = <2>;
-        };
-
-        combogt {
-            bindings = <&kp GREATER_THAN>;
-            key-positions = <1 2>;
-            timeout-ms = <175>;
-            layers = <2>;
-        };
 
         combo_esc {
             bindings = <&kp ESC>;
@@ -322,8 +309,6 @@
             timeout-ms = <175>;
             layers = <0>;
         };
-
-        
     };
 
     keymap {
